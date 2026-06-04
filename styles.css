@@ -609,6 +609,104 @@ details p {
   flex: 0 0 auto;
 }
 
+.hero-copy {
+  animation: heroIntro 720ms ease both;
+}
+
+.hero-projects .showcase-card {
+  animation: cardIntro 760ms ease both;
+}
+
+.hero-projects .showcase-card:nth-child(1) {
+  animation-delay: 120ms;
+}
+
+.hero-projects .showcase-card:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.hero-projects .showcase-card:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+.hero-projects .showcase-card:nth-child(4) {
+  animation-delay: 420ms;
+}
+
+.button,
+.card-link,
+.menu-cta,
+.floating-whatsapp {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.button:hover,
+.card-link:hover,
+.menu-cta:hover {
+  transform: translateY(-2px);
+}
+
+.floating-whatsapp {
+  animation: whatsappPulse 2200ms ease-in-out infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-4px) scale(1.04);
+  animation-play-state: paused;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 680ms ease,
+    transform 680ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroIntro {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardIntro {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
+  }
+
+  50% {
+    box-shadow: 0 16px 48px rgba(37, 211, 102, 0.46);
+  }
+}
+
 @media (max-width: 1050px) {
   .feature-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -747,5 +845,21 @@ details p {
   .feature-list article,
   .split-copy p {
     padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
