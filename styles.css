@@ -252,6 +252,49 @@ h3 {
   border-radius: 8px;
 }
 
+.method {
+  background:
+    linear-gradient(135deg, rgba(255, 178, 63, 0.1), transparent 34%),
+    #0b1017;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.method-card {
+  min-height: 300px;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent),
+    var(--panel);
+  border: 1px solid rgba(255, 178, 63, 0.18);
+  border-radius: 8px;
+}
+
+.method-card span {
+  display: inline-flex;
+  margin-bottom: 56px;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.method-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.45rem;
+}
+
+.method-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .section-heading {
   max-width: 900px;
   margin-bottom: 34px;
@@ -708,7 +751,8 @@ details p {
 }
 
 @media (max-width: 1050px) {
-  .feature-list {
+  .feature-list,
+  .method-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -782,6 +826,7 @@ details p {
   .split-copy,
   .showcase-grid,
   .feature-list,
+  .method-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
@@ -842,6 +887,7 @@ details p {
   }
 
   .price-card,
+  .method-card,
   .feature-list article,
   .split-copy p {
     padding: 22px;
