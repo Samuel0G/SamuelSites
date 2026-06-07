@@ -36,3 +36,28 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+const title = document.querySelector(".hero h1");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (title && !reduceMotion) {
+  const text = title.textContent.trim();
+  title.setAttribute("aria-label", text);
+  title.textContent = "";
+  title.classList.add("is-typing");
+
+  let index = 0;
+  const typeTitle = () => {
+    title.textContent = text.slice(0, index);
+    index += 1;
+
+    if (index <= text.length) {
+      window.setTimeout(typeTitle, 34);
+    } else {
+      title.classList.remove("is-typing");
+      title.classList.add("typing-done");
+    }
+  };
+
+  window.setTimeout(typeTitle, 260);
+}
