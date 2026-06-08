@@ -4,12 +4,14 @@ const menu = document.querySelector("#menu");
 toggle?.addEventListener("click", () => {
   const isOpen = menu.classList.toggle("is-open");
   toggle.setAttribute("aria-expanded", String(isOpen));
+  toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
 });
 
 menu?.addEventListener("click", (event) => {
   if (event.target instanceof HTMLAnchorElement) {
     menu.classList.remove("is-open");
     toggle?.setAttribute("aria-expanded", "false");
+    toggle?.setAttribute("aria-label", "Abrir menu");
   }
 });
 

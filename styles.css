@@ -1491,26 +1491,34 @@ details p {
 
 @media (max-width: 760px) {
   .topbar {
-    min-height: 64px;
+    min-height: 66px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .brand .sg-logo {
+    width: 42px;
+    height: 42px;
   }
 
   .menu-toggle {
     display: block;
+    flex: 0 0 auto;
   }
 
   .menu {
     position: absolute;
-    top: 64px;
-    right: 5vw;
-    left: 5vw;
+    top: 74px;
+    right: 20px;
+    left: 20px;
     display: none;
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
-    padding: 10px;
-    background: var(--panel);
+    gap: 4px;
+    padding: 12px;
+    background: rgba(17, 24, 33, 0.98);
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: 14px;
     box-shadow: var(--shadow);
   }
 
@@ -1519,33 +1527,35 @@ details p {
   }
 
   .menu a {
-    padding: 14px;
+    padding: 14px 16px;
+    border-radius: 10px;
   }
 
   .hero {
-    padding-top: 42px;
-    justify-items: start;
-    text-align: left;
+    padding: 46px 20px 42px;
+    justify-items: center;
+    text-align: center;
   }
 
   h1 {
-    min-height: auto;
-    max-width: 340px;
+    min-height: 3em;
+    max-width: 620px;
     margin-right: 0;
     margin-left: 0;
-    font-size: 2.2rem;
+    font-size: clamp(2.35rem, 10vw, 3rem);
+    line-height: 1.02;
   }
 
   .hero-copy {
     width: 100%;
-    max-width: 340px;
+    max-width: 620px;
   }
 
   .hero-actions {
     flex-direction: column;
-    width: min(320px, 100%);
+    width: min(360px, 100%);
     margin-right: auto;
-    margin-left: 0;
+    margin-left: auto;
   }
 
   .hero-actions .button {
@@ -1554,21 +1564,32 @@ details p {
 
   .hero-text,
   .trust-line {
-    max-width: 340px;
-    margin-right: 0;
-    margin-left: 0;
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-text {
+    margin-bottom: 24px;
+    font-size: 1.02rem;
+    line-height: 1.65;
+  }
+
+  .trust-line {
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 
   .section-heading.centered {
-    margin-right: 0;
-    margin-left: 0;
-    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
   }
 
   .section-heading,
   .section-heading p,
   h2 {
-    max-width: 340px;
+    max-width: 100%;
   }
 
   .split-copy,
@@ -1593,7 +1614,7 @@ details p {
   }
 
   .project-image {
-    min-height: 260px;
+    min-height: 230px;
   }
 
   .benefit-card,
@@ -1606,7 +1627,8 @@ details p {
   .system-panel,
   .feature-list article,
   .split-copy p {
-    max-width: 342px;
+    width: 100%;
+    max-width: none;
   }
 
   .about-card {
@@ -1614,13 +1636,13 @@ details p {
   }
 
   .about-photo-frame {
-    width: min(260px, 100%);
+    width: min(280px, 100%);
     margin: 0 auto;
   }
 
   .about-photo {
-    height: 300px;
-    min-height: 300px;
+    height: 320px;
+    min-height: 0;
   }
 
   .about-skill-grid {
@@ -1637,8 +1659,8 @@ details p {
   }
 
   .dashboard-mockup {
-    width: min(330px, 82vw);
-    flex-basis: min(330px, 82vw);
+    width: min(330px, 84vw);
+    flex-basis: min(330px, 84vw);
   }
 
   .mockup-schedule div {
@@ -1647,7 +1669,7 @@ details p {
   }
 
   .section {
-    padding: 62px 5vw;
+    padding: 58px 20px;
   }
 
   .faq {
@@ -1656,10 +1678,10 @@ details p {
 
   .contact {
     margin-top: 36px;
-    margin-right: 5vw;
+    margin-right: 20px;
     margin-bottom: 62px;
-    margin-left: 5vw;
-    padding: 24px;
+    margin-left: 20px;
+    padding: 24px 20px;
   }
 
   .footer {
@@ -1669,22 +1691,134 @@ details p {
 
 @media (max-width: 430px) {
   h1 {
-    min-height: auto;
-    font-size: 2.18rem;
+    min-height: 3.15em;
+    font-size: 2.28rem;
     line-height: 1.04;
   }
 
   h2 {
-    font-size: 1.82rem;
+    font-size: 1.95rem;
+    line-height: 1.08;
   }
 
   .hero-copy {
     width: 100%;
   }
 
+  .hero {
+    padding-top: 38px;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+  }
+
   .button,
   .hero-actions {
     width: 100%;
+  }
+
+  .button {
+    min-height: 48px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .benefit-card,
+  .service-card,
+  .workflow-card,
+  .price-card,
+  .project-content,
+  .about-card,
+  .feature-list article,
+  .split-copy p {
+    padding: 20px;
+  }
+
+  .benefit-card,
+  .service-card,
+  .workflow-card {
+    min-height: auto;
+  }
+
+  .project-image {
+    min-height: 210px;
+  }
+
+  .project-content h3 {
+    font-size: 1.42rem;
+  }
+
+  .system-panel {
+    padding: 20px;
+  }
+
+  .system-panel h2 {
+    font-size: 1.95rem;
+  }
+
+  .system-tags span {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .mockup-header {
+    flex-direction: column;
+  }
+
+  .dashboard-mockup {
+    width: min(310px, 86vw);
+    flex-basis: min(310px, 86vw);
+  }
+
+  .about-photo-frame {
+    width: min(250px, 100%);
+  }
+
+  .about-photo {
+    height: 288px;
+  }
+
+  .about-card h2 {
+    font-size: 2.25rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.35rem;
+  }
+
+  .about-skill-card {
+    min-height: 66px;
+    padding: 14px;
+  }
+
+  .about-skill-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .price-card h3 {
+    font-size: 1.65rem;
+  }
+
+  .price-value {
+    font-size: 1.8rem;
+  }
+
+  .media-card h3,
+  .media-card p {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .contact {
+    margin-right: 16px;
+    margin-left: 16px;
   }
 
   .floating-whatsapp {
@@ -1701,14 +1835,6 @@ details p {
     height: 52px;
   }
 
-  .price-card,
-  .benefit-card,
-  .project-content,
-  .about-card,
-  .feature-list article,
-  .split-copy p {
-    padding: 22px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
