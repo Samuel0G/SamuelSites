@@ -55,7 +55,7 @@ if (title && !reduceMotion) {
     index += 1;
 
     if (index <= text.length) {
-      window.setTimeout(typeTitle, 22);
+      window.setTimeout(typeTitle, 45);
     } else {
       title.classList.remove("is-typing");
       title.classList.add("typing-done");
