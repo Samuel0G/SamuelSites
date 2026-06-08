@@ -14,7 +14,7 @@ menu?.addEventListener("click", (event) => {
 });
 
 const revealItems = document.querySelectorAll(
-  ".section, .contact, .price-card, .feature-list article, .faq-list details"
+  ".section, .contact, .price-card, .benefit-card, .project-card, .service-card, .media-card, .workflow-card, .about-skill-card, .feature-list article, .faq-list details"
 );
 
 revealItems.forEach((item) => item.classList.add("reveal"));
@@ -39,6 +39,7 @@ if ("IntersectionObserver" in window) {
 
 const title = document.querySelector(".hero h1");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const scrollTop = document.querySelector(".scroll-top");
 
 if (title && !reduceMotion) {
   const text = title.textContent.trim();
@@ -52,12 +53,34 @@ if (title && !reduceMotion) {
     index += 1;
 
     if (index <= text.length) {
-      window.setTimeout(typeTitle, 34);
+      window.setTimeout(typeTitle, 22);
     } else {
       title.classList.remove("is-typing");
       title.classList.add("typing-done");
     }
   };
 
-  window.setTimeout(typeTitle, 260);
+  window.setTimeout(typeTitle, 80);
+}
+
+if (scrollTop) {
+  let scrollTicking = false;
+
+  const toggleScrollTop = () => {
+    scrollTop.classList.toggle("is-visible", window.scrollY > 420);
+    scrollTicking = false;
+  };
+
+  toggleScrollTop();
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(toggleScrollTop);
+        scrollTicking = true;
+      }
+    },
+    { passive: true }
+  );
 }
