@@ -696,7 +696,11 @@ h3 {
 }
 
 .services-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .service-card,
