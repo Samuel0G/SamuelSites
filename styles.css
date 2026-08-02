@@ -325,7 +325,6 @@ h3 {
 
 .benefit-card p,
 .project-card p,
-.system-panel p,
 .about-card p {
   color: var(--muted);
   line-height: 1.7;
@@ -445,265 +444,12 @@ h3 {
   color: var(--white);
 }
 
-.featured-system {
-  padding-top: 34px;
-}
 
-.system-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.72fr);
-  gap: clamp(28px, 4vw, 54px);
-  align-items: center;
-  padding: clamp(28px, 4vw, 48px);
-  background:
-    radial-gradient(circle at 78% 18%, rgba(255, 178, 63, 0.16), transparent 34%),
-    linear-gradient(135deg, rgba(255, 178, 63, 0.1), transparent 46%),
-    var(--panel-soft);
-  border: 1px solid rgba(255, 178, 63, 0.22);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition:
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
-}
-
-.system-panel:hover {
-  border-color: rgba(255, 178, 63, 0.38);
-  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
-  transform: translateY(-2px);
-}
-
-.system-panel h2 {
-  max-width: 760px;
-  font-size: clamp(2rem, 4vw, 3.8rem);
-}
-
-.system-panel p {
-  max-width: 720px;
-  margin: 18px 0 22px;
-}
-
-.system-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 24px;
-}
-
-.system-tags span {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 9px 11px;
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 178, 63, 0.2);
-  border-radius: 8px;
-  font-size: 0.84rem;
-  font-weight: 800;
-}
-
-.system-tags span::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: var(--accent);
-  border-radius: 999px;
-  box-shadow: 0 0 18px rgba(255, 178, 63, 0.72);
-}
-
-.system-showcase {
-  min-width: 0;
-}
-
-.system-mockup-track {
-  max-width: 100%;
-  min-width: 0;
-  overflow: hidden;
-  padding: 0 2px 12px;
-}
-
-.system-mockup-loop {
-  display: flex;
-  gap: 14px;
-  width: max-content;
-  animation: systemTrain 38s linear infinite;
-}
-
-.system-mockup-track:hover .system-mockup-loop {
-  animation-play-state: paused;
-}
-
-.dashboard-mockup {
-  position: relative;
-  padding: 14px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035)),
-    rgba(8, 11, 16, 0.46);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  box-shadow:
-    0 28px 70px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(18px);
-  overflow: hidden;
-  width: min(410px, 82vw);
-  flex: 0 0 min(410px, 82vw);
-}
-
-.dashboard-mockup::before {
-  content: "";
-  position: absolute;
-  inset: -40% auto auto -20%;
-  width: 220px;
-  height: 220px;
-  background: rgba(255, 178, 63, 0.16);
-  border-radius: 999px;
-  filter: blur(44px);
-}
-
-.mockup-topbar,
-.mockup-header,
-.mockup-stats,
-.mockup-schedule {
-  position: relative;
-  z-index: 1;
-}
-
-.mockup-topbar {
-  display: flex;
-  gap: 7px;
-  padding: 5px 3px 14px;
-}
-
-.mockup-topbar span {
-  width: 9px;
-  height: 9px;
-  background: rgba(255, 255, 255, 0.22);
-  border-radius: 999px;
-}
-
-.mockup-topbar span:first-child {
-  background: var(--accent);
-}
-
-.mockup-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
-
-.mockup-header p,
-.mockup-header strong {
-  margin: 0;
-}
-
-.mockup-header p {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-
-.mockup-header strong {
-  display: block;
-  margin-top: 6px;
-  color: var(--white);
-  font-size: 1.7rem;
-}
-
-.mockup-header > span {
-  padding: 7px 9px;
-  color: #081014;
-  background: var(--accent);
-  border-radius: 8px;
-  font-size: 0.78rem;
-  font-weight: 900;
-}
-
-.mockup-stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.mockup-stats article {
-  min-height: 118px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
-
-.mockup-stats span {
-  color: var(--accent);
-  font-size: 0.76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.mockup-stats strong {
-  display: block;
-  margin: 8px 0 4px;
-  color: var(--white);
-  font-size: 1.55rem;
-}
-
-.mockup-stats p,
-.mockup-schedule p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.mockup-schedule {
-  display: grid;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.mockup-schedule div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 8px;
-}
-
-.mockup-schedule span {
-  color: var(--accent);
-  font-weight: 900;
-}
-
-.digital-services {
-  padding-top: 44px;
-}
-
-.services-grid,
 .workflow-timeline {
   display: grid;
   gap: 16px;
 }
 
-.services-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: 100%;
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.service-card,
 .workflow-card {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
@@ -717,19 +463,12 @@ h3 {
     box-shadow 180ms ease;
 }
 
-.service-card {
-  min-height: 230px;
-  padding: 24px;
-}
-
-.service-card:hover,
 .workflow-card:hover {
   border-color: rgba(255, 178, 63, 0.34);
   box-shadow: 0 24px 62px rgba(0, 0, 0, 0.28);
   transform: translateY(-3px);
 }
 
-.service-card span,
 .workflow-card span {
   display: inline-flex;
   align-items: center;
@@ -744,12 +483,10 @@ h3 {
   font-weight: 900;
 }
 
-.service-card h3,
 .workflow-card h3 {
   margin-bottom: 10px;
 }
 
-.service-card p,
 .workflow-card p {
   margin-bottom: 0;
   color: var(--muted);
@@ -848,7 +585,7 @@ h3 {
   height: min(420px, 48vw);
   min-height: 320px;
   object-fit: cover;
-  object-position: 53% 24%;
+  object-position: center 32%;
   border-radius: 16px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
@@ -1030,13 +767,14 @@ h3 {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 420px));
+  grid-template-columns: repeat(2, minmax(0, 460px));
   gap: 18px;
   justify-content: center;
   align-items: stretch;
 }
 
 .price-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -1048,11 +786,7 @@ h3 {
 .price-card.featured {
   border-color: rgba(255, 178, 63, 0.55);
   box-shadow: 0 0 0 1px rgba(255, 178, 63, 0.16), var(--shadow);
-}
-
-.price-card.system-offer {
-  border-color: rgba(34, 211, 197, 0.24);
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+  transform: scale(1.02);
 }
 
 .price-card.creative-offer {
@@ -1064,9 +798,23 @@ h3 {
   text-align: center;
 }
 
-.price-card.system-offer,
 .price-card.creative-offer {
   text-align: center;
+}
+
+.price-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  color: #081014;
+  background: var(--accent);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(255, 178, 63, 0.34);
 }
 
 .price-label {
@@ -1078,15 +826,21 @@ h3 {
 }
 
 .price-card h3 {
-  margin-bottom: 14px;
-  font-size: 2rem;
+  margin-bottom: 12px;
+  font-size: 2.35rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.price-card.featured h3 {
+  margin-top: 6px;
 }
 
 .price-value {
-  margin-bottom: 20px;
-  color: var(--accent);
-  font-size: 2.2rem;
-  font-weight: 900;
+  margin: 4px 0 22px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 800;
 }
 
 .price-description {
@@ -1101,10 +855,33 @@ h3 {
   flex: 1;
   align-content: start;
   gap: 10px;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
   padding: 0;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: 700;
   list-style: none;
+}
+
+.price-card li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.price-card li::before {
+  content: "\2713";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #081014;
+  background: var(--accent);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  flex: 0 0 auto;
 }
 
 .price-card .button {
@@ -1353,16 +1130,6 @@ details p {
   }
 }
 
-@keyframes systemTrain {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - 7px));
-  }
-}
-
 @keyframes cursorBlink {
   0%,
   48% {
@@ -1379,7 +1146,6 @@ details p {
   .feature-list,
   .benefits-grid,
   .project-grid,
-  .services-grid,
   .workflow-timeline,
   .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1387,14 +1153,6 @@ details p {
 
   .workflow-timeline::before {
     display: none;
-  }
-
-  .system-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .dashboard-mockup {
-    max-width: 620px;
   }
 }
 
@@ -1505,20 +1263,14 @@ details p {
   .feature-list,
   .benefits-grid,
   .project-grid,
-  .services-grid,
   .workflow-timeline,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
 
   .project-card,
-  .system-panel,
   .about-card {
     grid-template-columns: 1fr;
-  }
-
-  .system-panel {
-    gap: 24px;
   }
 
   .project-image {
@@ -1527,11 +1279,9 @@ details p {
 
   .benefit-card,
   .project-card,
-  .service-card,
   .workflow-card,
   .price-card,
   .about-card,
-  .system-panel,
   .feature-list article,
   .split-copy p {
     width: 100%;
@@ -1554,25 +1304,6 @@ details p {
 
   .about-skill-grid {
     grid-template-columns: 1fr;
-  }
-
-  .mockup-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .system-mockup-track {
-    margin-right: -5vw;
-    padding-right: 5vw;
-  }
-
-  .dashboard-mockup {
-    width: min(330px, 84vw);
-    flex-basis: min(330px, 84vw);
-  }
-
-  .mockup-schedule div {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .section {
@@ -1637,7 +1368,6 @@ details p {
   }
 
   .benefit-card,
-  .service-card,
   .workflow-card,
   .price-card,
   .project-content,
@@ -1648,7 +1378,6 @@ details p {
   }
 
   .benefit-card,
-  .service-card,
   .workflow-card {
     min-height: auto;
   }
@@ -1659,28 +1388,6 @@ details p {
 
   .project-content h3 {
     font-size: 1.42rem;
-  }
-
-  .system-panel {
-    padding: 20px;
-  }
-
-  .system-panel h2 {
-    font-size: 1.95rem;
-  }
-
-  .system-tags span {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .mockup-header {
-    flex-direction: column;
-  }
-
-  .dashboard-mockup {
-    width: min(310px, 86vw);
-    flex-basis: min(310px, 86vw);
   }
 
   .about-photo-frame {
