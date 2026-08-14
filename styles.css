@@ -324,8 +324,7 @@ h3 {
 }
 
 .benefit-card p,
-.project-card p,
-.about-card p {
+.project-card p {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -514,197 +513,6 @@ h3 {
   padding: 24px;
 }
 
-.about-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
-  gap: clamp(30px, 5vw, 58px);
-  align-items: center;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: clamp(26px, 5vw, 54px);
-  text-align: left;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(244, 176, 79, 0.16), transparent 26%),
-    linear-gradient(135deg, rgba(10, 15, 30, 0.94), rgba(16, 24, 40, 0.9)),
-    #0a0f1e;
-  border: 1px solid rgba(244, 176, 79, 0.2);
-  border-radius: 18px;
-  box-shadow:
-    0 28px 80px rgba(0, 0, 0, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-}
-
-.about-card::before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  left: -30%;
-  width: 420px;
-  height: 420px;
-  background: rgba(244, 176, 79, 0.13);
-  border-radius: 999px;
-  filter: blur(70px);
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.about-card::after {
-  content: "";
-  position: absolute;
-  right: 18%;
-  bottom: 0;
-  width: 260px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(244, 176, 79, 0.75), transparent);
-  box-shadow: 0 0 18px rgba(244, 176, 79, 0.58);
-  pointer-events: none;
-}
-
-.about-photo-frame,
-.about-copy {
-  position: relative;
-  z-index: 1;
-}
-
-.about-photo-frame {
-  padding: 10px;
-  background:
-    linear-gradient(145deg, rgba(244, 176, 79, 0.22), rgba(255, 255, 255, 0.04)),
-    rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(244, 176, 79, 0.38);
-  border-radius: 22px;
-  box-shadow:
-    0 22px 60px rgba(0, 0, 0, 0.34),
-    0 0 34px rgba(244, 176, 79, 0.12);
-}
-
-.about-photo {
-  width: 100%;
-  height: min(420px, 48vw);
-  min-height: 320px;
-  object-fit: cover;
-  object-position: center 32%;
-  border-radius: 16px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-}
-
-.about-copy {
-  max-width: 720px;
-}
-
-.about-card h2 {
-  margin-bottom: 12px;
-  font-size: clamp(2.6rem, 5vw, 5rem);
-  line-height: 1.08;
-  text-shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
-}
-
-.about-subtitle {
-  margin-bottom: 24px;
-  color: var(--accent);
-  font-size: clamp(1.45rem, 3vw, 2.55rem);
-  font-weight: 900;
-  line-height: 1.12;
-  text-shadow: 0 0 22px rgba(244, 176, 79, 0.2);
-}
-
-.about-text {
-  display: grid;
-  gap: 14px;
-  max-width: 680px;
-  margin-bottom: 28px;
-}
-
-.about-text p {
-  margin-bottom: 0;
-  color: rgba(232, 241, 255, 0.78);
-  font-size: 1.03rem;
-  line-height: 1.75;
-}
-
-.about-skill-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.about-skill-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 76px;
-  padding: 18px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(244, 176, 79, 0.2);
-  border-radius: 14px;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(14px);
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    background 180ms ease;
-}
-
-.about-skill-card::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 -45%;
-  width: 34%;
-  background: linear-gradient(90deg, transparent, rgba(244, 176, 79, 0.18), transparent);
-  transform: skewX(-18deg);
-  transition: left 520ms ease;
-}
-
-.about-skill-card:hover {
-  background: rgba(255, 255, 255, 0.065);
-  border-color: rgba(244, 176, 79, 0.46);
-  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.3);
-  transform: translateY(-4px);
-}
-
-.about-skill-card:hover::after {
-  left: 115%;
-}
-
-.about-skill-icon {
-  display: inline-grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 auto;
-  place-items: center;
-  color: var(--accent);
-  filter: drop-shadow(0 0 12px rgba(244, 176, 79, 0.2));
-}
-
-.about-skill-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
-}
-
-.about-skill-icon .whatsapp-vector,
-.about-skill-icon .whatsapp-vector path {
-  fill: currentColor;
-  stroke: none;
-}
-
-.about-skill-card strong {
-  position: relative;
-  z-index: 1;
-  color: var(--white);
-  font-size: 0.98rem;
-  line-height: 1.25;
-}
-
 .section-heading {
   max-width: 900px;
   margin-bottom: 34px;
@@ -775,6 +583,7 @@ h3 {
 
 .pricing-grid {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(2, minmax(0, 420px));
   gap: 22px;
   justify-content: center;
@@ -792,7 +601,6 @@ h3 {
 }
 
 .price-card.featured {
-  padding-top: 34px;
   border-color: rgba(255, 178, 63, 0.6);
   box-shadow:
     0 -6px 0 rgba(255, 178, 63, 0.14) inset,
@@ -801,23 +609,26 @@ h3 {
   transform: scale(1.035);
 }
 
-.price-card.creative-offer {
+.price-card.system-offer {
+  background:
+    linear-gradient(145deg, rgba(255, 178, 63, 0.08), transparent 42%),
+    var(--panel);
   border-color: rgba(255, 178, 63, 0.28);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
 }
 
 .price-card.single-offer,
-.price-card.creative-offer {
+.price-card.system-offer {
   text-align: center;
 }
 
 .price-badge {
-  position: absolute;
-  top: -11px;
-  left: 28px;
   display: inline-flex;
   align-items: center;
+  align-self: center;
+  max-width: 100%;
   gap: 5px;
+  margin: -4px 0 16px;
   padding: 4px 11px;
   color: #081014;
   background: var(--accent);
@@ -826,14 +637,17 @@ h3 {
   font-weight: 900;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  text-align: center;
   box-shadow: 0 6px 16px rgba(255, 178, 63, 0.3);
 }
 
 .price-card h3 {
+  max-width: 100%;
   margin-bottom: 4px;
   font-size: 1.9rem;
   font-weight: 900;
   line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .price-card.featured h3 {
@@ -1299,8 +1113,7 @@ details p {
     grid-template-columns: 1fr;
   }
 
-  .project-card,
-  .about-card {
+  .project-card {
     grid-template-columns: 1fr;
   }
 
@@ -1312,7 +1125,6 @@ details p {
   .project-card,
   .workflow-card,
   .price-card,
-  .about-card,
   .feature-list article,
   .split-copy p {
     width: 100%;
@@ -1321,24 +1133,6 @@ details p {
 
   .price-card.featured {
     transform: none;
-  }
-
-  .about-card {
-    text-align: left;
-  }
-
-  .about-photo-frame {
-    width: min(280px, 100%);
-    margin: 0 auto;
-  }
-
-  .about-photo {
-    height: 320px;
-    min-height: 0;
-  }
-
-  .about-skill-grid {
-    grid-template-columns: 1fr;
   }
 
   .section {
@@ -1406,7 +1200,6 @@ details p {
   .workflow-card,
   .price-card,
   .project-content,
-  .about-card,
   .feature-list article,
   .split-copy p {
     padding: 20px;
@@ -1425,38 +1218,16 @@ details p {
     font-size: 1.42rem;
   }
 
-  .about-photo-frame {
-    width: min(250px, 100%);
-  }
-
-  .about-photo {
-    height: 288px;
-  }
-
-  .about-card h2 {
-    font-size: 2.25rem;
-  }
-
-  .about-subtitle {
-    font-size: 1.35rem;
-  }
-
-  .about-skill-card {
-    min-height: 66px;
-    padding: 14px;
-  }
-
-  .about-skill-icon {
-    width: 34px;
-    height: 34px;
-  }
-
   .price-card h3 {
-    font-size: 1.6rem;
+    font-size: 1.42rem;
   }
 
   .price-amount {
     font-size: 1.55rem;
+  }
+
+  .price-card .button {
+    width: 100%;
   }
 
   .contact {

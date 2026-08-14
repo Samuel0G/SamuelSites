@@ -16,7 +16,7 @@ menu?.addEventListener("click", (event) => {
 });
 
 const revealItems = document.querySelectorAll(
-  ".section, .contact, .price-card, .benefit-card, .project-card, .service-card, .workflow-card, .about-skill-card, .feature-list article, .faq-list details"
+  ".section, .contact, .price-card, .benefit-card, .project-card, .service-card, .workflow-card, .feature-list article, .faq-list details"
 );
 
 revealItems.forEach((item) => item.classList.add("reveal"));
